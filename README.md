@@ -3,7 +3,7 @@
 ## Overview
 
 - I have a working chatbot, although I view this as work in progress and may add improvements;
-- I need to build web service - work in progress.
+- I need to build web service - tbd.
 
 This started as an extension of a NLP course project I did. The project itself focused on building a stack overflow chatbot to provide answers to free form questions, essentially building a semantic vector of the question, comparing against similar vectors for previously answered questions, picking the closest and serving an appropriate response. However the stack overflow bot has been trained on stack overflow data, and can not handle a normal chitchat. 
 
