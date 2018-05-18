@@ -3,7 +3,7 @@
 ## Overview
 
 - I have a working chatbot, although I view this as work in progress and may add improvements;
-- I need to build web service.
+- I need to build web service - work in progress.
 
 This started as an extension of a NLP course project I did. The project itself focused on building a stack overflow chatbot to provide answers to free form questions, essentially building a semantic vector of the question, comparing against similar vectors for previously answered questions, picking the closest and serving an appropriate response. However the stack overflow bot has been trained on stack overflow data, and can not handle a normal chitchat. 
 
@@ -15,7 +15,7 @@ I have decided to build a chatbot using a seq2seq model, that would be able to g
 For the time being, I built a simple encoder-decoder LSTM model, two flavors: one for training and one for inference. It has generally follows the outlines explained in this keras blog:
 https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html
 
-The model is word-based. I have used GloVe embeddings to encode tokens. Depending on performance, the model can be easily enhanced by adding additional layers. I might try regularization also.
+The model is word-based. I have used GloVe embeddings to encode tokens. Depending on performance, the model can be easily enhanced by adding additional layers. Regularization? - possible.
 
 
 ## Data cleaning
