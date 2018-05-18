@@ -12,9 +12,7 @@ from keras.preprocessing.sequence import pad_sequences
 import numpy as np
 import nltk
 import os
-import sys
-import zipfile
-import urllib.request
+
 
 HIDDEN_UNITS = 256
 WHITELIST = 'abcdefghijklmnopqrstuvwxyz1234567890?.,'

@@ -33,7 +33,7 @@ MAX_VOCAB_SIZE = 400000
 WEIGHT_FILE_PATH = '/home/vlad/Documents/Chatbot/word-glove-weights.h5'
 
 
-
+df = readOpensubsData('/home/vlad/Documents/Chatbot/data/', max_len=20, fast_preprocessing=True)
 
 def load_glove():
     embeddings_index = {}
