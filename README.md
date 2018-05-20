@@ -2,20 +2,27 @@
 
 ## Overview
 
-- I have a working chatbot, although I view this as work in progress and may add improvements;
-- I need to build web service - tbd.
+There are three parts to the project:
+1. Build a chatbot engine for serving best response from stack overflow to technical questions
+2. Build a chatbot engine (this is the seq2seq model) for serving free-flow response to non-technical questions
+3. Integrate q&a engines into an off-the-shelf bot (Telegram)
 
-This started as an extension of a NLP course project I did. The project itself focused on building a stack overflow chatbot to provide answers to free form questions, essentially building a semantic vector of the question, comparing against similar vectors for previously answered questions, picking the closest and serving an appropriate response. However the stack overflow bot has been trained on stack overflow data, and can not handle a normal chitchat. 
+Username at Telegram is @hogofogo_bot. 
+
+The first part of the project itself focused on building a stack overflow chatbot to provide answers to free form questions, essentially building a semantic vector of the question, comparing against similar vectors for previously answered questions, picking the closest and serving an appropriate response. The responses are pre-built; the implementation is in jupyter notebook.
+
+The second part of the project is a chitchat boat that is able to process human input and respond, and is the focus of the below. 
 
 I have decided to build a chatbot using a seq2seq model, that would be able to generate human-like responses and train it on a sizable database of movie dialog subtitlles, which contains ~160K pairs. This is large enough to require a GPU processing. Once trained, the machine managed to carry on a reasonably coherent conversation - see flow example below. Some of the answers even come across as witty.
 
+The repo also contains the scripts necessary to build data and spin up the bot. 
 
 ## Archtecture
 
 For the time being, I built a simple encoder-decoder LSTM model, two flavors: one for training and one for inference. It has generally follows the outlines explained in this keras blog:
 https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html
 
-The model is word-based. I have used GloVe embeddings to encode tokens. Depending on performance, the model can be easily enhanced by adding additional layers. Regularization? - possible.
+The model is word-based. I have used GloVe embeddings to encode tokens. Depending on performance, the model can be easily enhanced by adding additional layers. 
 
 
 ## Data cleaning
