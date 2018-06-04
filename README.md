@@ -90,5 +90,5 @@ Out[75]: 'i m sorry'
 Further experiments may include:
 - deeper model;
 - more focused dataset (e.g. select questions only)
-- I need to build a web service engine - [priority for now]
+
 
